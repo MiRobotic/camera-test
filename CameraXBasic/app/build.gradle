@@ -46,6 +46,15 @@ android {
        }
     }
 
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
     buildFeatures {
         viewBinding true
     }
@@ -80,6 +89,7 @@ dependencies {
     // CameraX View class
     implementation "androidx.camera:camera-view:$camerax_version"
 
+    implementation(name:'temi_sdk', ext:'aar')
 
     // CameraX Extensions library
     // implementation "androidx.camera:camera-extensions:$camerax_version"
